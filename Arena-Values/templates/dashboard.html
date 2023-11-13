@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discord Bot Dashboard</title>
+</head>
+<body>
+    <h1>Discord Bot Dashboard</h1>
+
+    <h2>Create Embed</h2>
+    <form action="/create_embed" method="post">
+        <label for="title">Title:</label>
+        <input type="text" name="title" required>
+        <br>
+        <label for="description">Description:</label>
+        <input type="text" name="description" required>
+        <br>
+        <label for="color">Color (Hex):</label>
+        <input type="text" name="color" pattern="^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$" required>
+        <br>
+        <input type="submit" value="Create Embed">
+    </form>
+
+    <h2>Embeds</h2>
+    {% for title, embed in embeds.items() %}
+        <div>
+            <h3>{{ title }}</h3>
+            <p>{{ embed.description }}</p>
+        </div>
+    {% endfor %}
+</body>
+</html>
