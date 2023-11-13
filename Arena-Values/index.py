@@ -12,7 +12,7 @@ intents.message_mentions = True
 bot = commands.Bot(command_prefix="!", intents=intents)
 
 # Your Discord bot token
-TOKEN = "MTE3MzcxOTY3MjE2ODkxMDg1OA.G3FK-z.xSIJB3riGKaDfh6ININIKZsN0ABJ6oaD0qrwoE"
+TOKEN = "MTE3MzcxOTY3MjE2ODkxMDg1OA.GYnrCn.d2sADy2tLWR5PBoJhd3Km68tyXP4oUbcXtdLNc"
 
 # Dictionary to store embeds
 embeds = {}
